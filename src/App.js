@@ -2,7 +2,7 @@ import './App.css';
 import Day1 from './day1';
 import Day2 from './day2';
 import Day3 from './day3';
-
+import Day4 from './day4';
 function App() {
   return (
     <div className="App">
@@ -14,6 +14,9 @@ function App() {
       <hr></hr>
       <p>Day3</p>
       <Day3/>
+      <hr></hr>
+      <p>Day4</p>
+      <Day4/>
     </div>
     
   );
