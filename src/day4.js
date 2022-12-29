@@ -20,15 +20,13 @@ function Day4() {
     e.preventDefault();
 
     const elfAnswer = message.trimEnd().split('\n')
-        .map(item => item.split(',').map(x => x.split("-").map(Number)));
+        .map(item => item.split(',').map(x => x.split("-").map(Number)))
+        .filter(([a, b]) => {
+          return checkResultWithinOtherPart2(a, b) || checkResultWithinOtherPart2(b, a);
+        });;
 
-    console.log(elfAnswer);
-    const filteredAnswer = elfAnswer.filter(([a, b]) => {
-      return checkResultWithinOtherPart2(a, b) || checkResultWithinOtherPart2(b, a);
-    });
-    
-    console.log('steve', filteredAnswer.length);
-    setAnswer(filteredAnswer.length);
+    console.log('steve', elfAnswer.length);
+    setAnswer(elfAnswer.length);
     return;
   }
   return (
